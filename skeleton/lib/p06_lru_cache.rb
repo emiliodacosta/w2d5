@@ -19,10 +19,12 @@ class LRUCache
     if @store.include?(key)
       update_node!(node)
     else
-      new_val = prc.call(key)
+      new_val = @prc.call(key)
+      new_node = Node.new(key, new_val)
+      eject! if @store.count == @max
+      calc!(new_node.key)
 
-
-      @store.calc!(node.key)
+    end
 
 
   end

@@ -35,7 +35,7 @@ include Enumerable
     @count -= 1
   end
 
-  def each
+  def eachgit
     @store.each do |bucket|
       bucket.each do |node|
           yield(node.key, node.val)
