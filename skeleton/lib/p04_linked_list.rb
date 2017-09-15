@@ -67,7 +67,7 @@ include Enumerable
   def get(key)
     node = self.first
     until node.key == key
-      return if node == @tail
+      return nil if node == @tail
       node = node.next
     end
     node.val
@@ -101,7 +101,7 @@ include Enumerable
   end
 
   # uncomment when you have `each` working and `Enumerable` included
-  # def to_s
-  #   inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
-  # end
+  def to_s
+    inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
+  end
 end
