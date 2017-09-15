@@ -1,5 +1,4 @@
 class Fixnum
-  # Fixnum#hash already implemented for you
 end
 
 class Array
@@ -21,18 +20,15 @@ end
 
 class Hash
   # This returns 0 because rspec will break if it returns nil
-  # Make sure to implement an actual Hash#hash method
+  # Make sure to implement an actual hash#hash method
   def hash
     result = ""
-    p self
     arr = self.sort_by {|k,v| k}
-    p self
-    p arr
     arr.each do |el|
       result += el[0].object_id.to_s
       result += el[1].hash.to_s if el[1].is_a?(Integer)
       result += el[1].hash.to_s if el[1].is_a?(String)
     end
-    result
+    result.to_i
   end
 end

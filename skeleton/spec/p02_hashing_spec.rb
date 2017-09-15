@@ -1,7 +1,7 @@
 require 'rspec'
 require 'p02_hashing'
 
-describe "Hashing" do
+describe "hashing" do
   describe Array do
     it "should hash to an integer" do
       expect([1,2].hash).to be_a(Integer)
