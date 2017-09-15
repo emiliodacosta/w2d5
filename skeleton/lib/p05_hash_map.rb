@@ -10,18 +10,23 @@ class HashMap
   end
 
   def include?(key)
+
   end
 
   def set(key, val)
+
   end
 
   def get(key)
+
   end
 
   def delete(key)
+
   end
 
   def each
+
   end
 
   # uncomment when you have Enumerable included
@@ -42,9 +47,11 @@ class HashMap
   end
 
   def resize!
+
   end
 
   def bucket(key)
     # optional but useful; return the bucket corresponding to `key`
+
   end
 end

@@ -26,8 +26,7 @@ class Hash
     arr = self.sort_by {|k,v| k}
     arr.each do |el|
       result += el[0].object_id.to_s
-      result += el[1].hash.to_s if el[1].is_a?(Integer)
-      result += el[1].hash.to_s if el[1].is_a?(String)
+      result += el[1].hash.to_s
     end
     result.to_i
   end
